@@ -1,10 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   list-style: none;
-  @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
 }
 
 img {
@@ -23,23 +23,29 @@ img {
 .container .leftcontainer {
   background-color: #0ea5e9;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding-left: 2.5rem;
 }
 .container .leftcontainer .title {
-  margin-top: 1rem;
-  align-self: center;
+  margin-top: 0.5rem;
+  align-self: flex-start;
   position: relative;
   top: 2rem;
-  border: 2px solid red;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container .leftcontainer .title:hover {
+  transform: scale(1.06);
 }
 .container .leftcontainer .middle {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 1rem;
   position: relative;
   top: 3rem;
@@ -47,6 +53,7 @@ img {
 .container .leftcontainer .bottom {
   display: flex;
   flex-direction: column;
+  align-self: flex-start;
   gap: 1rem;
   position: relative;
   top: 10rem;
@@ -55,11 +62,76 @@ img {
 .rightcontainer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 0, 7fr;
-  grid-template-rows: 1fr 1fr 1fr 1.2fr;
+  grid-template-rows: 0.8fr 1fr 1fr 1.2fr;
 }
 .rightcontainer .header {
-  background-color: blue;
   grid-area: 1/1/2/4;
+  padding: 2rem;
+}
+.rightcontainer .header .upcontainer {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightcontainer .header .upcontainer .searchbar {
+  padding-left: 3rem;
+  padding-bottom: 3.5rem;
+}
+.rightcontainer .header .upcontainer input {
+  width: 35rem;
+  height: 2rem;
+  background-color: lightgrey;
+  opacity: 0.6;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem;
+}
+.rightcontainer .header .upcontainer .notification {
+  padding-right: 2rem;
+  padding-bottom: 3.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.rightcontainer .header .upcontainer .notification span {
+  cursor: pointer;
+  transition: 0.3 all ease-in-out;
+}
+.rightcontainer .header .bottomcontainer {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  justify-content: space-between;
+  align-items: center;
+}
+.rightcontainer .header .bottomcontainer .logo {
+  display: flex;
+  flex-direction: column;
+  padding-left: 3rem;
+}
+.rightcontainer .header .bottomcontainer .buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 2rem;
+  gap: 2rem;
+}
+.rightcontainer .header .bottomcontainer .buttons button {
+  width: 8rem;
+  height: 3rem;
+  border-radius: 2rem;
+  background-color: #0ea5e9;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3 ease;
+}
+.rightcontainer .header .bottomcontainer .buttons button:hover {
+  background-color: white;
+  color: #0ea5e9;
+  transform: scale(1.14);
+  cursor: pointer;
 }
 .rightcontainer .projects {
   background-color: red;
@@ -72,6 +144,11 @@ img {
 .rightcontainer .trending {
   grid-area: 4/3/5/3;
   background-color: purple;
+}
+
+span {
+  padding-right: 1rem;
+  transform: scale(1.5);
 }
 
 /*# sourceMappingURL=styles.css.map */
