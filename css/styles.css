@@ -30,6 +30,7 @@ img {
   justify-content: flex-start;
   align-items: center;
   padding-left: 2.5rem;
+  box-shadow: 2px 0px 2px -1px gray;
 }
 .container .leftcontainer .title {
   margin-top: 0.5rem;
@@ -167,7 +168,7 @@ img {
   margin-top: 1.5rem;
   padding: 2rem;
   border-left: 0.8rem solid orange;
-  box-shadow: 0 4px 2px -1px gray;
+  box-shadow: 4px 4px 2px -1px gray;
   transition: all 0.3s ease;
 }
 .rightcontainer .projects .modal:hover {
@@ -196,7 +197,41 @@ img {
 }
 .rightcontainer .announcements {
   grid-area: 2/3/4/4;
-  background-color: yellow;
+  background-color: lightgrey;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1.5rem;
+}
+.rightcontainer .announcements .announcementsmodal {
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 4px 4px 2px -1px gray;
+}
+.rightcontainer .announcements .announcementsmodal.one {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.rightcontainer .announcements .announcementsmodal.three {
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.rightcontainer .announcements .announcementsmodal h1 {
+  font-size: 1.1rem;
+}
+.rightcontainer .announcements .announcementsmodal h2 {
+  padding-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: normal;
+}
+.rightcontainer .announcements .announcementsmodal .divider {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  opacity: 0.6;
+  margin-top: 2.5rem;
 }
 .rightcontainer .trending {
   grid-area: 4/3/5/3;
