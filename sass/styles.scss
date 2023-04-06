@@ -140,7 +140,7 @@ img{
                     color: white;
                     font-size: 1.2rem;
                     font-weight: bold;
-                    transition: all 0.3 ease;
+                    transition: all .3s ease-in-out;
                     &:hover{
                         background-color: white;
                         color: #0ea5e9;
@@ -175,6 +175,7 @@ img{
             border-left: 0.8rem solid orange;
             box-shadow: 4px 4px 2px -1px gray;
             transition: all 0.3s ease;
+            cursor: pointer;
             &:hover{
                 transform: scale(1.02);
             }
@@ -214,7 +215,7 @@ img{
         .announcementsmodal{
             background-color: white;
             padding:2rem;
-        box-shadow: 4px 4px 2px -1px gray;
+            box-shadow: 4px 4px 2px -1px gray;
 
             &.one{
                 border-top-left-radius: 1rem;
@@ -244,7 +245,26 @@ img{
     }
     .trending{
         grid-area: 4/3/5/3;
-        background-color: purple;
+        background-color: lightgrey;
+        opacity: .7;
+        padding: 1.5rem;
+        .trendscontainer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            background-color: white;
+            box-shadow: 4px 4px 2px -1px gray;
+            border-radius: 1rem;
+            .rowflex{
+                padding: 3rem;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                gap: 2rem;
+
+            }
+        }
     }
 }
 
